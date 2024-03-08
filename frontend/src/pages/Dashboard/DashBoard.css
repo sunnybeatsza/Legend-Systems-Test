@@ -1,0 +1,61 @@
+/* Add these styles to a Dashboard.css file or include them in your existing CSS file */
+
+/* General styles for the dashboard container */
+div {
+  margin: 20px;
+}
+
+/* Styles for the header section */
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Styles for the "Tasks" heading */
+h2 {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Styles for the "Get Tasks" button and "Create Tasks" link */
+button,
+a {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover,
+a:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Styles for table headers */
+th {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Styles for table cells */
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Alternate row background color for better readability */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
