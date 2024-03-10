@@ -33,38 +33,38 @@ export const Dashboard = () => {
 
   return (
     <div>
-      {/* Navbar component */}
       <Navbar />
       <h1>Dashboard</h1>
       <h2>Tasks</h2>
-      {/* Link to the CreateTask page */}
       <Link to="/CreateTask">Create Tasks</Link>
-
-      {/* Table to display tasks */}
-      <table>
-        <thead>
-          <tr>
-            <th>Task</th>
-            <th>Operations</th>
-            {/* Add more table headers as needed */}
-          </tr>
-        </thead>
-        <tbody>
-          {items.map((item) =>
-            // Map through the tasks and create table rows
-            item.Items.map((task, index) => (
-              <tr key={item._id + index}>
-                <td>{task}</td>
-                <td>
-                  {/* Links to the EditTask and DeleteTask pages with task ID */}
-                  <Link to={`/EditTask/${task}`}>Edit</Link>
-                  <Link to={`/DeleteTask/${task}`}>Delete</Link>
-                </td>
+      {items.length > 0 ? (
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Task Name</th>
+              <th>Description</th>
+              <th>Status</th>
+              <th>Due date</th>
+              {/* Add more table headers as needed */}
+            </tr>
+          </thead>
+          <tbody>
+            {items.map((item) => (
+              <tr key={item.ID}>
+                <td>{item.ID}</td>
+                <td>{item.Taskname}</td>
+                <td>{item.Description}</td>
+                <td>{item.Status}</td>
+                <td>{item.Due_date}</td>
+                {/* Add more table cells for additional data */}
               </tr>
-            ))
-          )}
-        </tbody>
-      </table>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 };
